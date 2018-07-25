@@ -1,0 +1,59 @@
+#midi-map{
+  background-color: rgb(31,31,31);
+  margin: 0;
+  padding:60px 0 0 0;
+  color: #ccc;
+  @extend .main-font;
+
+  *{
+    box-sizing:border-box;
+  }
+
+  .top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(31,31,31);
+    padding: 10px 10px 0 10px;
+  }
+
+  table{
+    @extend .main-font;
+    width: 100%;
+    
+    tr{
+
+      transition:all .2s ease;
+
+      &:nth-child(even){
+        background-color: #333;
+      }
+      &.active{
+        background-color: #fff;
+        transition:all 0;
+        color:#000;
+        svg{
+          fill:#000;
+        }
+      }
+    }
+
+    td{
+      padding: 8px;
+    }
+
+    .remove{
+      fill:#ccc;
+      cursor: pointer;
+      width: 20px;
+      &:hover{
+        fill:rgb(239, 99, 99);
+      }
+      svg{      
+        width: 16px;
+      }
+    }
+    
+  }
+}

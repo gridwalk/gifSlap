@@ -1,0 +1,48 @@
+<div id="settings">
+  <div class="round-box">
+    <span click-element="gif-folder">
+      <svg name='images_folder'></svg>
+    </span>
+    <a id="choose-folder" class="button" click-element="gif-folder" >Change Gif Folder</a>
+    <a click-element="gif-folder">
+      <input type="text" id="gif-folder-readout" disabled value="No folder selected">
+    </a>
+    <input type="file" id="gif-folder" class="hidden" nwdirectory callback='main.images.reset_set' >
+  </div>
+
+  <div class="round-box mb">
+    <label>
+      <input type="checkbox" id='randomize' />
+      <span>Randomize GIFs</span>
+    </label>
+    &nbsp;&nbsp;&nbsp;
+    <label>
+      <input type="checkbox" id='gamepad' />
+      <span>Use Gamepad</span>
+    </label>
+  </div>
+
+  <div class="round-box mb">
+    <label>
+      <input type="checkbox" id='show-intensive-controls' />
+      <span>Show Processor Intensive Controls</span>
+      <ul>
+        <li>Border Image Width</li>
+        <li>Border Image Slices</li>
+      </ul>
+    </label>
+    
+  </div>
+
+  <div id="submenu">
+    <a class="external-link" data-href='http://gifslap.com/docs/change_log'>
+      v<span id='version'></span>
+    </a> |&nbsp;
+    <!-- <a id="credits" data-action="launch-modal" modal-id="modal-credits">
+      Credits
+    </a> | -->
+    <a class="external-link" data-href='http://gifslap.com/docs'>
+      Documentation
+    </a>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+input:focus,select:focus,textarea:focus,button:focus,a:focus{
+  outline: none;
+}
+
+input[type=text],input[type=file]{
+  @extend .main-font;
+  height:30px;
+  line-height:30px;
+  padding:3px 0 0 5px;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+input[disabled]{
+  color:gray;
+}
+
+select{
+  -webkit-appearance:none;
+  height:30px;
+  border-radius: 0;
+  padding: 0 40px 0 10px;
+  cursor:pointer;
+}
+
+.select-wrapper{
+  position: relative;
+  display: inline-block;
+  cursor:pointer;
+
+  &:after{
+    content:'';
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 29px;
+    height: 28px;
+    background: #ddd url(images/chevron-small-down.svg) no-repeat;
+    pointer-events:none;
+  }
+}
+
+label{
+  cursor:pointer;
+  
+  &:hover [type=checkbox]{
+    background-color: #fff;
+    border: 1px solid #999
+  }
+}
+  
+[type=checkbox]{
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  -webkit-appearance:none;
+  vertical-align: middle;
+  cursor: pointer;
+  &:checked{
+    background: #f8f8f8 url(images/check.svg) no-repeat;
+  }
+}

@@ -1,0 +1,11 @@
+<html id=midi-map><head><script> 
+
+    // Nodey stuff
+
+    var fs = require('fs');  
+    var gui = require('nw.gui');
+
+    // establish link to deck
+    // deck = global.window;
+
+  </script><link rel=stylesheet href=style.css></head><body><div class=top><div class=round-box>Active MIDI Map:<div class="select-wrapper ml"><select></select></div><a class="small-button flr txac" id=delete-map>Delete</a> <a class="small-button flr txac" id=new-map>New</a> <a class="small-button flr txac" id=export-map>Export</a> <a class="small-button flr txac" id=import-map>Import</a> <input type=file id=import-map-file class=hidden> <input type=file id=export-map-file class=hidden nwsaveas="MIDI Map.json"></div></div><table></table></body></html>

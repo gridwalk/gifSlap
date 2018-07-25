@@ -1,0 +1,41 @@
+// Presets
+  
+#presets{
+  padding: 20px 20px 20px 65px;
+
+  svg{
+    width:30px;
+    margin-bottom:-12px;
+    fill:#ccc;
+    cursor:pointer;
+  }
+}
+
+.preset-tile{
+  float: left;
+  background: #333;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #222;
+  color:#888;
+  cursor: pointer;
+  max-width: 100px;
+  &:hover{
+    color:#ccc;
+  }
+}
+
+.preset-thumbnail {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
+}
+
+#delete_preset.warn{
+  background-color: #FF6060;
+  color:#000;
+  fill:#000;
+}

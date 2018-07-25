@@ -1,0 +1,114 @@
+.slider-container {
+  float: left;
+  width: 100%;
+  background-color: #333;
+  margin: 1px 0;
+  padding: 1px 2px;
+  position: relative;
+  height: 57px;
+  >span {
+    color: #888;
+    height: 25px;
+    display: inline-block;
+    line-height: 25px;
+    padding-left: 3px;
+  }
+  .reset{
+    right:34px;
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 29px;
+  position: relative;
+  background: #222;
+  cursor:pointer;
+}
+
+.slider-bar {
+  background: rgb(103, 224, 112);
+  height: 29px;
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+}
+
+.slider-auto-bar {
+  display: none;
+  border-right: 2px solid #FF4DE8;
+  height: 14px;
+  position: absolute;
+  top: 0;
+}
+
+.slider-value {
+  position: absolute;
+  top: 7px;
+  z-index: 1;
+  left: 2px;
+  color: #000;
+}
+
+.auto-button {
+  width: 29px;
+  fill: #666;
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  cursor: pointer;
+
+  svg{
+    display: none;
+  }
+
+  &[wave=saw] svg.wave-saw{
+    display: block;
+  }
+
+  &[wave=sine] svg.wave-sine{
+    display: block;
+  }
+
+  &[wave=tri] svg.wave-tri{
+    display: block;
+  }
+
+  &[wave=noise] svg.wave-noise{
+    display: block;
+  }
+
+}
+
+.auto-speed-slider{
+  display: none;
+  width: 100%;
+  height: 14px;
+  position: relative;
+  background-color: #222;
+  cursor:pointer;
+  margin-top: 1px;
+  .auto-slider-bar{
+    background-color: #FFCAFB;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.auto-button.active{
+  &~.auto-speed-slider{
+    display: block;
+  }
+
+  &~.slider{
+    height: 14px;
+    .slider-bar{
+      height: 14px;
+    }
+    .slider-auto-bar{
+      display: block;
+    }
+  }
+}

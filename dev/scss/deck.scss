@@ -1,0 +1,98 @@
+#deck{
+
+  background-color: rgb(31,31,31);
+  // background-color: blue;  
+  margin: 0;
+  color: #fff;
+
+  @extend .main-font;
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing:border-box;
+    // font-family:andale mono,helvetica,arial,sans-serif;
+    font-size:12px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  hr{
+    width: 100%;
+    float: left;
+    opacity: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  h2{
+    font-weight: normal;
+  }
+
+  .panel{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px 0 65px;
+  }
+
+  #update-bar{
+    height: 24px;
+    line-height: 24px;
+    background-color: #4894FF;
+    color:#fff;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: none;
+
+    &:hover{
+      background-color: #64A4FF;
+    }
+
+    &.active{
+      display: block;
+    }
+
+  }
+
+  #modal{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.83);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    >div{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-70%);
+      text-align: center;
+
+      #midi-message{
+        font-size: 33px;
+        font-weight: 700;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .modal-show #modal{
+    display: block;
+  }
+
+  @import 'deck/deck-menu.scss';    
+  @import 'deck/deck-controls.scss';
+  @import 'deck/deck-presets.scss';
+  @import 'deck/deck-settings.scss';
+
+}

@@ -1,0 +1,81 @@
+#enable-preview{
+  z-index: 1;
+  margin: -73px 0 58px;
+  position: relative;
+  text-align: center;
+  color: #aaa;
+  cursor:pointer;
+  &:hover{
+    color:#ccc;
+  }
+}
+
+#preview{
+  width: 100%;
+  background-color: #000;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  border: 1px solid #333;
+  &:hover~#enable-preview{
+    color:#ccc;
+  }
+}
+
+#framerate{
+  // margin-top: 10px;
+  input{
+    -webkit-appearance: none;
+    width: 30px;
+    border: 0;
+  }
+}
+
+#right-bar{
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  padding-left: 20px;
+
+  .round-box{
+    margin-top: 10px;
+  }
+}
+
+#next-gif{
+  cursor:pointer;
+  position: relative;
+}
+
+#next-gif-img{
+  margin: 0px auto;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 120px;
+}
+
+#next-gif-canvas{
+  width: 100%;
+  height: 120px;
+}
+
+.counter{
+  position: absolute;
+  font-weight: 700;
+  color: #aaa;
+  background-color: #111;
+  bottom: 0;
+  right: 0;
+  padding: 1px 2px;
+  font-size: 10px;
+  span{
+    font-size: 10px;
+  }
+}
+
+#webcam-sends.hidden{
+  display: none;
+}

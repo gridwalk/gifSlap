@@ -1,0 +1,26 @@
+.round-box{
+  padding: 10px;
+  border: 1px solid #666; 
+  border-radius:6px;
+  margin-bottom: 10px;
+}
+
+.modal{
+  display: none;
+  background-color: rgba(191,231,226,.85);
+  border-radius: 2px;
+  height:75vh;
+  width: 80vw;
+  position: absolute;
+  top: 10vh; 
+  left: 10vw;
+  padding: 20px;
+  z-index: 3;
+  .modal-content{
+    display: none;
+
+    .gifSlap-logo{
+      width: 120px;
+    }
+  }
+}

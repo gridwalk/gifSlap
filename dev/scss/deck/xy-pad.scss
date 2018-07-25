@@ -1,0 +1,121 @@
+.xy-container{
+  float: left;
+  width: 100%;
+  background-color: #333;
+  margin: 1px;
+  padding: 2px;
+  position: relative;
+  >span {
+    color: #888;
+    height: 25px;
+    display: inline-block;
+    line-height: 25px;
+  }
+  .reset{
+    top:3px;
+    right: 2px;
+    
+  }
+}
+
+.xy-surface{
+  background:#222;
+  width: 100%;
+  height: 246px;
+  position: relative;
+  cursor:pointer;
+  overflow: hidden;
+
+  >div{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .map-axis{
+    display: none;
+    margin: 0px auto;
+    left: 50%;
+    top: 73px;
+    z-index: 1;
+    cursor:pointer;
+    transform: translateX(-50%);
+    b{
+      font-size: 80px;
+    }
+  }
+
+  .x-axis{
+    height: 100%;
+    border-right: 1px solid #ccc;
+    width: 50%;
+    max-width: 100%;
+    min-width: 0%;
+  }
+
+  .y-axis{
+    height: 50%;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    max-height: 100%;
+    min-height:0%;
+  }
+
+  &.locked>.x-axis{
+    border-right: 1px dashed #ccc;
+  }
+
+  &.locked>.y-axis{
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .xy-position{
+    width: 50%;
+    height: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    &:after{
+      content:"";
+      position: absolute;
+      right: -26px;
+      bottom: -25px;
+      display: block;
+      width: 51px;
+      height: 51px;
+      border: 1px solid #555;
+      transition: all .2s ease;
+    }
+  }
+
+  &.locked>.xy-position:after{
+    transform:rotate(45deg);
+  }
+}
+
+.keydown-shift:not(.keydown-control){
+  .y-axis{
+    display: none;
+  }
+  .xy-position:before{
+    position: absolute;
+    right: -35px;
+    bottom: 1px;
+    width: 71px;
+    content:'';
+    border-bottom: 1px solid #555;
+  }
+}
+
+.keydown-control:not(.keydown-shift){
+  .x-axis{
+    display: none;
+  }
+  .xy-position:before{
+    position: absolute;
+    bottom: -34px;
+    right: 0px;
+    height: 72px;
+    content:'';
+    border-right: 1px solid #555;
+  }
+}

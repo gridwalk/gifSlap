@@ -1,0 +1,32 @@
+#menu {
+  width: 45px;
+  background-color: rgb(41,41,41);
+  height: 100%;
+  border-right: 1px solid rgb(60,60,60);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  li {
+    margin: 0;
+    border-bottom: 1px solid #555;
+    padding: 10px;
+    height: 45px;
+    cursor:pointer;
+    
+    &:hover{
+      background-color: rgb(51,51,51);
+      fill:#eee;
+    }
+    
+    svg{
+      fill:#ccc;
+      max-width: 100%;
+    }
+  }
+
+}

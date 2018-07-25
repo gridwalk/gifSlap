@@ -1,0 +1,36 @@
+#onboard{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+
+  *{
+    box-sizing:border-box;
+  }  
+
+  #gifs-amount-message,#load-gifs-continue{
+    display: none;
+  }
+
+  #thank-you{
+    max-width: 560px;
+    margin: 0 auto;
+    display: none;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 4px;
+    border-bottom: 1px solid gray;
+    padding: 30px;
+    font-size: 12px;
+    line-height: 17px;
+
+    .button {
+      display: block;
+      margin: 30px auto 10px;
+      width: 210px;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+}

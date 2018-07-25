@@ -1,0 +1,41 @@
+<head>
+  <title>gifSlap</title>
+  <script>
+
+    var gui           = require('nw.gui');
+    var fs            = require('fs');
+    var http          = require('http');
+    var path          = require('path');
+    var request       = require('request'); // used in updater.js
+    var DecompressZip = require('decompress-zip'); // used in updater.js
+    var exec          = require('child_process').exec;// used in updater.js
+
+    var js_bundle = require('./js/bundle.result.json'); // its the whole bundle, man
+
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gifSlap">
+
+  <!-- Loading Screen -->
+  <div id="loading">
+    <img src="images/gifSlap-icon.png" /><br />
+    Loading
+  </div>
+
+  <!-- All modules load into #container -->
+  <div id="container"></div>
+
+  <!-- Onboarding stuff -->
+  @@include("../onboard/onboard.html")
+
+  <!-- Updater stuff -->
+  @@include("../updater/updater.html")
+
+  <script>
+
+    // write the bundle to the page
+    document.write( js_bundle.main.scripts );
+
+  </script>
+</body>

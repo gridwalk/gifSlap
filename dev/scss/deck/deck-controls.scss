@@ -1,0 +1,134 @@
+// Controls
+
+@import 'slider.scss';
+@import 'xy-pad.scss';
+@import 'right-bar.scss';
+
+#controls{
+  padding: 10px 250px 10px 10px;
+  height: 100%;
+  width: 100%;
+
+  .reset{
+    position: absolute;
+    top: 2px;
+    background-color: #444;
+    height: 21px;
+    line-height: 21px;
+    padding: 0 5px;
+    color: #888;
+    cursor: pointer;
+    &:hover{
+      color: #ccc;
+      svg{
+        fill:  #ccc;
+      }
+    }
+    svg{
+      fill: #9B9B9B;
+      width: 12px;
+      display: inline-block;
+      margin: 0 5px -2px;
+    }
+  }
+
+  .toggle.active, .auto-button.active {
+    fill: #FF4DE8;
+  }
+
+  &.mapping {
+
+    .slider-bar,.auto-slider-bar,.slider-value{
+      display: none;
+    }
+
+    .map-axis{
+      display: block;
+    }
+
+    [map]{
+      transition:background-color .1s;
+      background-color: #fc0;
+      color: #111;
+      fill: #111;
+
+      &.mapped{
+        background-color: #fff4ca;
+      }
+
+      &:hover{
+        background-color: #fff;
+        color: #000;
+        fill: #000;
+      }
+    }
+  }
+
+}
+
+.slim-button{
+  float: left;
+  padding:5px 10px;
+  text-align: center;
+  border: 1px solid #222;
+  background-color: #333;
+  color: #888;
+  fill: #888;
+  cursor: pointer;
+  position: relative;
+  
+  &:hover{
+    color:#ccc;
+    fill:#ccc;
+  }
+
+  &.controls-showing {
+    color: #FFCAFB;
+    fill: #FF4DE8;
+  }
+
+  &.running{
+    color: #8AFFFF;
+    fill: #0ff;
+  }
+  
+  svg{
+    max-width: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  span{
+    display: block;
+  }
+}
+
+#control-banks{
+  .active {
+    color: #CFF8FF;
+    fill: #1EFDFD;
+  }
+}
+
+
+// these are shown only when the user presses the corresponding control bank activator
+.control-bank{
+  display: none;
+  float: left;
+  width: 100%;
+
+  .slim-button{
+    padding: 9px;
+
+    &.active {
+      color: #FFCAFB;
+      fill: #FF4DE8;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  #controls-center .w50, #controls-center .w49, {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,44 @@
+// Settings
+  
+#settings{
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  
+  svg{
+    width:30px;
+    margin-bottom:-12px;
+    fill:#ccc;
+    cursor:pointer;
+  }
+}
+
+.clickable{
+  cursor:pointer;
+}
+
+.icon{
+  width:30px;
+  height:30px;
+  vertical-align: top;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  border-style: none;
+  border-width: 0px;
+  max-width: 0px;
+  max-height: 0px;
+}
+
+#show-intensive-controls~ul{
+  display: none;
+}
+
+#show-intensive-controls:checked~ul{
+  display: block;
+}

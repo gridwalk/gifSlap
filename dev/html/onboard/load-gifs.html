@@ -1,0 +1,32 @@
+<div class="modal-content" id="load-gifs">
+  <div class="w100 txac qmb">
+    <img src="images/gifslap-icon.png" class="gifSlap-logo" /><br>
+    Welcome to gifSlap.
+  </div>
+
+  <div class="w100 txac">
+    <div class="mb">
+      Start by choosing a folder of gifs.
+    </div>
+    <div>
+      <a id="choose-folder" class="button" click-element="gif-folder" >
+        Choose Folder
+      </a>
+
+      <a click-element="gif-folder">
+        <input type="text" id="gif-folder-readout" disabled value="No folder selected" click-element="gif-folder">
+      </a>
+
+      <input type="file" id="gif-folder" class="hidden" callback="onboard.load_gifs_continue" nwdirectory>
+
+      <div id="gifs-amount-message" class="qmb">
+        Amount of gifs in this folder: <b id="gifs-amount"></b>
+      </div>
+
+      <div id="load-gifs-continue">
+        <a class="button continue-button">Continue</a>
+      </div>
+
+    </div>
+  </div>
+</div>

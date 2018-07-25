@@ -1,0 +1,51 @@
+<html id="deck">
+<head>
+  <title>gifSlap</title>
+  <script> 
+
+    // Nodey stuff
+
+    var fs = require('fs');  
+    var gui = require('nw.gui');
+    var path = require('path');
+    var http = require('http');
+
+    // bundled JS
+    var js_bundle = require('./js/bundle.result.json');
+
+    // establish link to main window
+    main = global.window;
+    gifslap = main.gifslap;
+
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id='controls' class='panel' style='display:block'>
+    @@include('controls-panel/controls-panel.html')
+    @@include('deck-presets.html')
+    @@include('deck-settings.html')
+  </div>
+
+
+  <div id='settings' class='panel'>
+    
+  </div>  
+
+  <div id="modal">
+    <div>
+      <div id="midi-message">Waiting for MIDI input</div>
+      <div class="button" id="cancel-midi-waiting">Cancel (ESC)</div>
+      <!-- <div>Tip: Hold Shift when pressing a button to bypass this screen.</div> -->
+    </div>
+  </div>
+
+  <script>
+    // write the deck bundle to the page
+    document.write( js_bundle.deck.scripts );
+  </script>
+
+</body>
+</html>

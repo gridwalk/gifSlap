@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundlePackageType</key>
+	<string>BRPL</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en-US</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.4</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.jazz-soft.Jazz-Plugin</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>WebPluginMIMETypes</key>
+	<dict>
+		<key>audio/x-jazz</key>
+		<dict/>
+	</dict>
+	<key>WebPluginDescription</key>
+	<string>Jazz-Plugin provides low-level MIDI support</string>
+	<key>WebPluginName</key>
+	<string>Jazz-Plugin</string>
+</dict>
+</plist>

@@ -1,0 +1,57 @@
+.gifSlap{
+
+  @extend .main-font;
+
+  height:100%;
+  border:none;
+  background-size:cover;
+  background-color:#000;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+
+  // no dragging allowed
+  *{
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #loading{
+    display: none;
+    width: 100%;
+    color:#fff;
+    text-align: center;
+
+    img{
+      width: 140px;
+      margin: 30vh 0 20px;
+    }
+  }
+
+  #container{
+    text-align:center;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    transition:width .15s ease;
+
+    img{
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      image-rendering:pixelated;
+    }
+
+    // for f8 - use 16:9 display ratio
+    // top: 265px;
+    // height: 720px;
+    // width: 81%;
+    // left: 320px;
+    // transform: rotate(1deg);
+    // overflow: hidden;
+  }
+  
+  .gif{
+    // position:absolute;
+    // display:block!important;
+  }
+}

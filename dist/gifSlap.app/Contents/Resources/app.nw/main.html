@@ -1,0 +1,18 @@
+<head><title>gifSlap</title><script>
+
+    var gui           = require('nw.gui');
+    var fs            = require('fs');
+    var http          = require('http');
+    var path          = require('path');
+    var request       = require('request'); // used in updater.js
+    var DecompressZip = require('decompress-zip'); // used in updater.js
+    var exec          = require('child_process').exec;// used in updater.js
+
+    var js_bundle = require('./js/bundle.result.json'); // its the whole bundle, man
+
+  </script><link rel=stylesheet href=style.css></head><body class=gifSlap><div id=loading><img src=images/gifSlap-icon.png><br>Loading</div><div id=container></div><div id=onboard><div class=modal id=onboard-modal><div class=modal-content id=load-gifs><div class="w100 txac qmb"><img src=images/gifslap-icon.png class=gifSlap-logo><br>Welcome to gifSlap.</div><div class="w100 txac"><div class=mb>Start by choosing a folder of gifs.</div><div><a id=choose-folder class=button click-element=gif-folder>Choose Folder</a> <a click-element=gif-folder><input type=text id=gif-folder-readout disabled value="No folder selected" click-element=gif-folder></a> <input type=file id=gif-folder class=hidden callback=onboard.load_gifs_continue nwdirectory><div id=gifs-amount-message class=qmb>Amount of gifs in this folder: <b id=gifs-amount></b></div><div id=load-gifs-continue><a class="button continue-button">Continue</a></div></div></div></div></div></div><div id=updater><div class=modal id=updater-modal><div class=modal-content><div class="w100 txac qmb"><img src=images/gifslap-icon.png class=gifSlap-logo><br>Updating gifSlap:</div><div class="w100 txac" step=download><span id=download-size class=mb>Downloading <b></b> MB.</span></div><div class="w100 txac" step=extract><span id=extracting class=mb>Extracting <b></b> Files.</span></div><div class="w100 txac" step=reload-win><span id=reloading class=mb>Reloading. gifSlap will close and reopen automatically.</span></div><div class="w100 txac" step=reload-mac><div id=reloading class=dmb>Close and reopen gifSlap to use the updated version.</div><div class=button id=close>Close gifSlap</div></div><div class="w100 txac" step=win-error><div id=pc-error class=dmb>There was an error updating gifSlap.<br>Follow the instructions on the gifSlap documentation to resolve this error.</div><div data-href=http://gifslap.com/docs/pc_update class="button external-link">Open Instructions</div></div><div id=progress-bar-container><div id=progress-bar></div></div></div></div></div><script>
+
+    // write the bundle to the page
+    document.write( js_bundle.main.scripts );
+
+  </script></body>

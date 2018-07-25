@@ -1,0 +1,20 @@
+{
+  "name": "gifSlap",
+  "main": "main.html",
+  "version": "0.7.7",
+  "single-instance": false,
+  "window": {
+    "title": "gifSlap",
+    "toolbar":false,
+    "width": 1000,
+    "min_width": 530,
+    "height": 620,
+    "min_height": 400,
+    "icon": "images/gifSlap_icon.png"
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "chromium-args": "--load-plugin=plugins\\JazzControl.dll",
+  "node-remote": "<local>"
+}

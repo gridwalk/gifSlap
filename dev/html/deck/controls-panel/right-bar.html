@@ -1,0 +1,135 @@
+<div id="right-bar">
+
+  <video id='preview' autoplay></video>
+  <div id="enable-preview">Enable Preview</div>
+
+  <div class="flex">
+    <div class="slim-button" control-id="unskip_next_gif" map>
+        <svg name="chevron_left"></svg>
+        <span>Unskip</span>
+      </div>
+      <div class="slim-button" control-id="skip_next_gif" map>
+        <svg name="chevron_right"></svg>
+        <span>Skip</span>
+      </div>
+  </div>
+
+  <div id="next-gif">
+    <canvas id="next-gif-canvas"></canvas>
+    <img id="next-gif-img" />
+    <div class="counter">
+      <span class="current">0</span>/<span class="total">0</span>
+    </div>
+  </div>
+
+  <div class="flex mb">
+
+    <div class="slim-button w100" control-id="next_image" map>
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Send to Foreground</span>
+    </div>
+
+    <div class="slim-button w100 control-bank" control-id="send_to_background" bank-id="background" map>
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Send to Background</span>
+    </div>
+
+    <div class="slim-button w100 control-bank" control-id="send_to_midground" bank-id="midground" map>
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Send to Midground</span>
+    </div>
+
+    <div class="slim-button w100 control-bank" control-id="send_preview_to_big_shrinker" bank-id="big-shrinker" map>
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Send to Big Shrinker</span>
+    </div>
+
+    <div class="slim-button w100 control-bank" control-id="send_preview_to_puncher" bank-id="puncher" map>
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Send to Puncher</span>
+    </div>
+
+    <div class="slim-button w100 control-bank" control-id="send_preview_to_corner_box" bank-id="corner-box" map>
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Send to Corner Box</span>
+    </div>
+
+  </div>
+
+  <div class="slim-button w100 toggle" control-id="toggle_webcam">
+    <svg name="webcam"></svg>
+    <span>Toggle Webcam</span>
+  </div>
+  
+  <div id="webcam-sends" class='hidden'>
+    <div class="slim-button w100" control-id="next_webcam_input">
+      <svg name="webcam"></svg>
+      <span>Next Webcam Input</span>
+    </div>
+    <div class="slim-button w100" control-id="send_webcam_to_foreground">
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Webcam to Foreground</span>
+    </div>
+    <div class="slim-button w100 toggle" control-id="send_webcam_to_background">
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Webcam to BG</span>
+    </div>
+    <div class="slim-button w100 toggle" control-id="send_webcam_to_corner_box">
+      <svg name="level_up" class="flip-v"></svg>
+      <span>Webcam to Corner Box</span>
+    </div>  
+  </div>
+  
+
+  <div class="round-box fll w100" id="framerate">
+    Framerate
+    <input id="current-framerate" type="text" disabled value="0" />
+    <input id="target-framerate" type="text" value="30" />
+  </div>
+
+  <div class="flex fll">
+
+    <div class="slim-button toggle w50" control-id="pause_play" state-id="paused" map>
+      <svg name='play'></svg>
+      <span>Pause</span>
+    </div>
+
+    <div class="slim-button w50" control-id="refresh" map>
+      <svg name='refresh'></svg>
+      <span>Refresh</span>
+    </div>
+
+    <div class="slim-button w50" control-id="zoom_out" map>
+      <svg name='minus'></svg>
+      <span>Zoom Out</span>
+    </div>
+
+    <div class="slim-button w50" control-id="zoom_in" map>
+      <svg name='plus'></svg>
+      <span>Zoom In</span>
+    </div>
+
+  </div>
+
+  <div class="slim-button toggle w100 mb" control-id="toggle_autopilot" state-id='autopilot_run' map>
+    <svg name="rocket"></svg>
+    <span>Toggle Autopilot</span>
+  </div>
+  
+  <div class="slim-button w100 toggle" id="map-midi">
+    <svg name="midi"></svg>
+    <span>MIDI Learn</span>
+  </div>
+
+  <div class="slim-button w100 mb" id="edit-map">
+    <svg name="edit"></svg>
+    <span>Edit MIDI Map</span>
+  </div>
+
+  <div class="slim-button w100 mb" control-id="save_preset">
+    <svg name="edit"></svg>
+    <span>Save Preset</span>
+  </div>
+  
+
+</div>

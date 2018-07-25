@@ -1,0 +1,97 @@
+/*semantic classes*/
+.db{
+  display:block;
+}
+
+.dib{
+  display:inline-block;
+}
+
+.w100{
+  width: 100%;
+}
+
+.w70{
+  width: 70%!important;
+}
+
+.w50{
+  width: 50%;
+}
+
+.w49{
+  width: 49%;
+}
+
+.w30{
+  width: 30%;
+}
+
+.w25{
+  width: 25%;
+}
+
+.ml{
+  margin-left: 10px;
+}
+
+.mb{
+  margin-bottom: 10px;
+}
+
+.dmb{
+  margin-bottom: 20px;
+}
+
+.qmb{
+  margin-bottom: 40px;
+}
+
+.txac{
+  text-align:center;
+}
+
+.fll{
+  float: left;
+}
+
+.flr{
+  float: right;
+}
+
+.ova{
+  overflow:auto;
+}
+
+.rot90{
+  transform:rotate(90deg);
+}
+
+.rot180{
+  transform:rotate(180deg);
+}
+
+.flip-v{
+  transform:scaleY(-1);
+}
+
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  >*{
+    flex-grow:1;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  border-style: none;
+  border-width: 0px;
+  max-width: 0px;
+  max-height: 0px;
+}

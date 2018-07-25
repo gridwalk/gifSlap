@@ -1,0 +1,31 @@
+making a module stateful
+========================
+
+
+
+needs update and toggle functions that chage state values (rather than editing values directly)
+
+update - for sliders and xys
+toggle - for booleans
+
+change control registry funciton to use change function, rather than updating the value
+
+add the module state variables to state.js
+
+if the value is a booolean, find the indicator in the deck HTML and add parameter:
+state-id='name_of_state_id'
+so it can be found when the state is updated
+
+IMPORTANT
+- try to make state name variables match the control name in control registry
+  - If not, add state-id='name_of_state_id'
+- dont change control names in control registry, peoples midi maps will break
+
+
+
+
+things to look into
+=======================
+
+
+will automations automatically end when a module is not running?

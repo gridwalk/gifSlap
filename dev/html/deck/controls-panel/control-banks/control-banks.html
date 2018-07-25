@@ -1,0 +1,110 @@
+<div class="round-box w100 ova" id="control-banks">
+
+  <div id="control-bank-activators">
+
+    <!-- MODES -->
+
+    <div class="flex" id="mode-control-bank-activators">
+
+      <div class="slim-button controls-showing" control-id="activate_chain_mode" name='chain' map>
+        <svg name="document_landscape"></svg>
+        <span>Chain</span>
+      </div>
+
+      <div class="slim-button" control-id="activate_corners_mode" name='corners' map>
+        <svg name="document_landscape"></svg>
+        <span>Corners</span>
+      </div>
+
+      <div class="slim-button" control-id="activate_hallway_mode" name='hallway' map>
+        <svg name="document_landscape"></svg>
+        <span>Hallway</span>
+      </div>
+
+      <div class="slim-button" control-id="activate_mirror_mode" name='mirror' map>
+        <svg name="document_landscape"></svg>
+        <span>Mirror</span>
+      </div>
+
+      <div class="slim-button" control-id="activate_circle_mode" name='circle' map>
+        <svg name="document_landscape"></svg>
+        <span>Circle</span>
+      </div>
+
+      <div class="slim-button" control-id="activate_center_mode" name='center' map>
+        <svg name="document_landscape"></svg>
+        <span>Center</span>
+      </div>
+
+    </div> <!-- end #mode-control-bank-activators -->    
+
+    <!-- ADDONS -->
+
+    <div class="flex mb" id="addon-control-bank-activators">
+
+      <div class="slim-button" name='wind' state-id='wind_run'>
+        <svg name="plus"></svg>
+        <span>Wind</span>
+      </div>
+
+      <div class="slim-button" name='background' state-id='background_run'>
+        <svg name="plus"></svg>
+        <span>Background</span>
+      </div>
+
+      <div class="slim-button" name='midground' state-id='midground_run'>
+        <svg name="plus"></svg>
+        <span>Midground</span>
+      </div>
+
+      <div class="slim-button" name='big-shrinker'>
+        <svg name="plus"></svg>
+        <span>Big Shrinker</span>
+      </div>
+
+ <!--      <div class="slim-button" name='puncher'>
+        <svg name="plus"></svg>
+        <span>Puncher</span>
+      </div> -->
+
+      <div class="slim-button" name='rainbow-bars' state-id='rainbow_bars_run'>
+        <svg name="plus"></svg>
+        <span>Rainbow Bars</span>
+      </div>
+
+      <div class="slim-button" name='corner-box' state-id='corner_box_run'>
+        <svg name="plus"></svg>
+        <span>Corner Box</span>
+      </div>
+
+      <div class="slim-button" name='border-boxes'>
+        <svg name="plus"></svg>
+        <span>Border Boxes</span>
+      </div>
+
+    </div> <!-- end #addon-control-bank-activators -->
+
+  </div> <!-- end #control-bank-activators -->
+
+  
+  <!-- CONTROL BANKS -->
+  
+  <!-- Modes -->
+  @@include('chain.html')
+  @@include('hallway.html')
+  @@include('mirror.html')
+  @@include('circle.html')
+  @@include('corners.html')
+  @@include('center.html')
+  
+  <!-- Addons -->
+  @@include('wind.html')
+  @@include('background.html')
+  @@include('midground.html')
+  @@include('big-shrinker.html')
+  @@include('puncher.html')
+  @@include('rainbow-bars.html')
+  @@include('corner-box.html')
+  @@include('border-boxes.html')
+
+</div>
