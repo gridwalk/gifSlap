@@ -7,9 +7,6 @@ var window_ui = {
     // show window
     win.show();
 
-    //win.showDevTools()
-
-
     // show loading screen if not refreshing
     if( localStorage.refreshing !== 'true' ){
       $('#loading').show();
@@ -79,7 +76,7 @@ var window_ui = {
       // Deck is not open yet so open it
       window_ui.deck = gui.Window.open('./deck.html',{
         title:'gifSlap Control Deck',
-        // toolbar:false,
+        toolbar:false,
         frame:true,
         width:1000,
         min_width:600,

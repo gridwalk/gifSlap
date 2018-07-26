@@ -5,6 +5,7 @@
   "single-instance": false,
   "window": {
     "title": "gifSlap",
+    "toolbar":false,
     "width": 1000,
     "min_width": 530,
     "height": 620,
