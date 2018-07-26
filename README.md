@@ -11,6 +11,6 @@ VJ Software for people who love gifs.
 - Run npm install
 - Run gulp
 
-This should open a running copy of the software that reloads when you change a file.
+This should open an instance of the software that reloads when you change a file.
 
 If you are developing on Windows you will need to run the gifSlap installer first, located in /dist.
