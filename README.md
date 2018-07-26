@@ -6,13 +6,11 @@ VJ Software for people who love gifs.
 
 # How to build the project
 
-## Mac
+- Download the repository
+- Open /dev folder
+- Run npm install
+- Run gulp
 
--
+This should open a running copy of the software that reloads when you change a file.
 
-## Windows
-
-Using Linux subsystem throws off the build scripts, so I would recommend running gulp using the Windows command prompt.
-
-You will need some programs installed first:
-- 
+If you are developing on Windows you will need to run the gifSlap installer first, located in /dist.
