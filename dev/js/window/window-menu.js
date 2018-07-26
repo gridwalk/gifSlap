@@ -1,5 +1,6 @@
 // load Window controls API
 var win = gui.Window.get();
+win.showDevTools()
 
 // initialize menu bar
 var menubar = new gui.Menu({type:"menubar"});

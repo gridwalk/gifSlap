@@ -5,7 +5,6 @@
   "single-instance": false,
   "window": {
     "title": "gifSlap",
-    "toolbar":false,
     "width": 1000,
     "min_width": 530,
     "height": 620,
@@ -16,5 +15,10 @@
     "plugin": true
   },
   "chromium-args": "--load-plugin=plugins\\JazzControl.dll",
-  "node-remote": "<local>"
+  "node-remote": "<local>",
+  "dependencies": {
+    "decompress-zip": "^0.3.1",
+    "eventemitter3": "^3.1.0",
+    "request": "^2.87.0"
+  }
 }

@@ -41,6 +41,9 @@ gifslap = {
 
     if( localStorage.gif_folder == 'null' || localStorage.gif_folder == "No Folder Selected" ){ return; }
 
+    // if folder has moved return
+    if( !fs.existsSync(localStorage.gif_folder) ){ return }
+
     gifslap.all_gifs = Array();
     gifs_folder_contents = fs.readdirSync(localStorage.gif_folder);
     gifs_folder_contents.forEach(function( item ){

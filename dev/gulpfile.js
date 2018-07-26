@@ -15,13 +15,7 @@ var archiver    = require('gulp-archiver');
 // var ftp         = require('vinyl-ftp');
 // var mysql       = require('mysql');
 var fs          = require('fs');
-
-var db_credentials = {
-  host     : 'mysql.gifslap.com',
-  user     : 'gifslap_user',
-  password : 'electric2015',
-  database : 'gifslap'
-}
+var path        = require('path')
 
 // platform this is running on
 var isWin = /^win/.test(process.platform);
@@ -29,6 +23,11 @@ if( isWin ){
   var operating_system = 'win'
 }else{
   var operating_system = 'mac'
+}
+
+// workaround for linux subsystem on windows
+if( process.platform == 'linux' ){
+  operating_system = 'win'
 }
 
 // Markup
@@ -170,7 +169,7 @@ gulp.task('compile', ['make_app_zip_win'], shell.task([
 }));
 
 gulp.task('set_icon',['compile'],shell.task([
-  '"Resource Hacker\\reshacker" -addoverwrite "gifSlap_noicon.exe", "gifSlap_tester.exe", "gifslap-icon.ico", ICONGROUP, IDR_MAINFRAME, 1033'
+  'ResourceHacker\\ResHacker.exe -addoverwrite "gifSlap_noicon.exe", "gifSlap_tester.exe", "gifslap-icon.ico", ICONGROUP, IDR_MAINFRAME, 1033'
 ],{
   cwd:'./win',
   ignoreErrors:true
@@ -211,20 +210,32 @@ gulp.task('make_update_zip_win', ['clean_update_folder'], function(){
     .pipe(notify('Update Zipped'));
 });
 
-gulp.task('update_installer_version',function(){
+gulp.task('set_installer_vars',function(){
 
   version = gifSlap_version();
 
-  var setup_file = fs.readFileSync('./win/gifSlap_setup_script.iss', 'utf-8');
+  var setup_file = fs.readFileSync('./win/gifSlap_setup_script_template.iss', 'utf-8');
+
+  var repositoryPath = path.join(__dirname,'../')
+
+  // repository paths
+  setup_file = setup_file.replace(/{{gifSlap-repository-path}}/g,repositoryPath);
+
+  // app version
   setup_file = setup_file.replace(/^AppVersion=.*$/gim, 'AppVersion='+version);
+  
+  // output file name with version
   setup_file = setup_file.replace(/^OutputBaseFilename=.*$/gim, 'OutputBaseFilename=gifSlap_setup_'+version+'_pc');
+
+  // write usable setup script path
   fs.writeFileSync('./win/gifSlap_setup_script.iss', setup_file, 'utf-8');
 
 });
 
-gulp.task('run_install_compiler',['update_installer_version','delete_old_exes'],shell.task([
-  '"C:\/Program Files (x86)\/Inno Setup 5\/ISCC.exe" win\\gifSlap_setup_script.iss'
+gulp.task('run_install_compiler',['set_installer_vars','delete_old_exes'],shell.task([
+  '"ISCC.exe" ..\\gifSlap_setup_script.iss'
 ],{
+  cwd:'./win/InnoSetup',
   ignoreErrors:true
 }));
 
@@ -244,6 +255,6 @@ gulp.task('build_mac', ['clean', 'close', 'markup', 'styles', 'scripts', 'open_m
 
 gulp.task('build_win', ['clean', 'close', 'markup', 'styles', 'scripts', 'make_app_zip_win', 'compile','set_icon','rename_exe','delete_old_exes','open_win']);
 
-gulp.task('win_make_installer',['update_installer_version','run_install_compiler']);
+gulp.task('win_make_installer',['set_installer_vars','run_install_compiler']);
 
 gulp.task('default',['watch']);

@@ -7,7 +7,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{0D075D57-B6C5-477F-9280-775FEF0D655D}
 AppName=gifSlap
-AppVersion=0.7.2
+AppVersion=0.7.7
 ;AppVerName=gifSlap 0.0.0
 AppPublisher=Gridwalk Labs
 AppPublisherURL=http://gifslap.com
@@ -16,10 +16,10 @@ AppUpdatesURL=http://gifslap.com
 DefaultDirName={localappdata}\gifSlap
 DisableDirPage=yes
 DefaultGroupName=gifSlap
-LicenseFile=C:\Users\don\Desktop\gifslap\beta\dev\win\gifSlap_License_Agreement.txt
-OutputDir=C:\Users\don\Desktop\gifslap\beta\dist
-OutputBaseFilename=gifSlap_setup_0.7.2_pc
-SetupIconFile=C:\Users\don\Desktop\gifslap\beta\dev\win\gifslap-icon.ico
+LicenseFile=C:\Users\don\Projects\Personal\gifSlap\dev\win\gifSlap_License_Agreement.txt
+OutputDir=C:\Users\don\Projects\Personal\gifSlap\dist
+OutputBaseFilename=gifSlap_setup_0.7.7_pc
+SetupIconFile=C:\Users\don\Projects\Personal\gifSlap\dev\win\gifslap-icon.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -31,14 +31,14 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\gifSlap.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\d3dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\ffmpegsumo.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\gifSlap_License_Agreement.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\don\Desktop\gifslap\beta\dev\win\nw.pak"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\gifSlap.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\d3dcompiler_47.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\ffmpegsumo.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\gifSlap_License_Agreement.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\icudtl.dat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\don\Projects\Personal\gifSlap\dev\win\nw.pak"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
